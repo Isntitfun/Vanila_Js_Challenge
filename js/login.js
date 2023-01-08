@@ -8,17 +8,17 @@ const initialTodoArray = (user) => {
   const initialArray = [
     {
       user,
-      value: `❕To mark as done, click on the todo item.`,
+      value: `❕ To mark as done, click on the todo item.`,
       todoID: `${Date.now()}0`,
     },
     {
       user,
-      value: `❕To delete a todo item, enable edit mode and click on the todo item.`,
+      value: `❕ To delete a todo item, enable edit mode and click on the todo item.`,
       todoID: `${Date.now()}1`,
     },
     {
       user,
-      value: `❕To edit the content of a todo item, enable edit mode and right click on the todo item.`,
+      value: `❕ To edit the content of a todo item, enable edit mode and right click on the todo item. To save the changes, right click once more.`,
       todoID: `${Date.now()}2`,
     },
   ];

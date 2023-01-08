@@ -73,12 +73,9 @@ const removeTodos = (event) => {
   if (todoTextEditMode) {
     const target = event.target;
     const id = target.dataset.id;
-    console.log(id);
     todoList.removeChild(target);
     refreshTodos();
-    console.log(todos);
     todos = todos.filter((todoObj) => todoObj.todoID != id);
-    console.log(todos);
     saveTodos();
   }
 };
@@ -133,7 +130,7 @@ const handleTodoEdit = () => {
     todoEditBtn.classList.remove("todoEditActive");
     todoText.forEach((todo) => {
       todo.classList.remove("todoTextEdit");
-      if (!todo.getAttribute("readonly")) {
+      if (todo.getAttribute("readonly") !== "") {
         let editedTodo = todos.find((i) => i.todoID == todo.dataset.id);
         editedTodo.value = todo.value;
         const index = todos.indexOf(editedTodo);
