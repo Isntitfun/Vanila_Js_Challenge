@@ -1,0 +1,195 @@
+.todoBox {
+  all: unset;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(46, 46, 46, 0.3);
+  backdrop-filter: blur(10px);
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  width: 25vw;
+  height: 40vh;
+  max-width: 40vh;
+  max-height: 25vw;
+  padding: 5vh;
+  transition: all 0.15s ease-out;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 4;
+}
+
+.editModeOn {
+  background-color: rgba(46, 46, 46, 0.5);
+}
+
+.todoClose2 {
+  all: unset;
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2px 4.625px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  opacity: 0;
+}
+
+.todoAdd {
+  all: unset;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3px 3.75px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  opacity: 0;
+}
+
+.todoEdit {
+  all: unset;
+  position: absolute;
+  bottom: 2vh;
+  right: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  opacity: 0;
+}
+
+.todoEditActive {
+  background-color: rgb(213, 213, 213);
+  color: black;
+}
+
+.todoClose2:hover {
+  background-color: rgb(255, 88, 88);
+  color: white;
+}
+
+.todoAdd:hover {
+  background-color: rgb(213, 213, 213);
+  color: black;
+}
+
+.todoEdit:hover {
+  background-color: rgb(213, 213, 213);
+  color: black;
+}
+
+.todoBox::-webkit-scrollbar {
+  display: none;
+}
+
+.todoBoxInactive {
+  transform: scale(0.05);
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+}
+
+.todoBoxInactive:hover {
+  transform: scale(0.15);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.todoList {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 46px;
+  grid-auto-rows: min-content;
+  gap: 10px;
+  justify-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  opacity: 0;
+  display: none;
+}
+
+.todoList::-webkit-scrollbar {
+  display: none;
+}
+
+.todoListActive {
+  opacity: 1 !important;
+  display: grid;
+}
+
+.todoText {
+  all: unset;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 92%;
+  min-height: 46px;
+  background-color: transparent;
+  background-color: rgba(59, 59, 59, 0.5);
+  color: white;
+  font-size: 12px;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+  padding: 12px;
+  word-wrap: break-word;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  order: 1;
+}
+
+.todoText::-webkit-scrollbar {
+  display: none;
+}
+
+.todoText:hover {
+  background-color: rgba(227, 227, 227, 0.5);
+  color: rgba(59, 59, 59, 0.7);
+}
+
+.todoTextEdit:hover {
+  background-color: rgb(255, 88, 88);
+  color: rgba(59, 59, 59, 0.7);
+}
+
+.checkedTodo {
+  background-color: rgba(227, 227, 227, 0.5);
+  color: rgba(59, 59, 59, 0.5);
+  text-decoration: line-through;
+}
+
+.editingTodo {
+  text-decoration: none;
+  background-color: rgba(227, 227, 227, 0.5);
+  color: rgba(0, 0, 0, 0.9);
+  cursor: text;
+}
+
+.editingTodo:hover {
+  background-color: rgba(227, 227, 227, 0.5);
+  color: rgba(0, 0, 0, 0.9);
+}

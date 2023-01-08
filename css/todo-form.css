@@ -1,0 +1,131 @@
+.todoForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
+  transition: all 0.15s ease-out;
+}
+
+.todoInactive {
+  transform: scale(0.05);
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.todoInactive:hover {
+  transform: scale(0.15);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.todoActive {
+  opacity: 1 !important;
+}
+
+.todo {
+  all: unset;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  width: 25vw;
+  height: 40vh;
+  max-width: 40vh;
+  max-height: 25vw;
+  padding: 5vh;
+  transition: all 0.15s ease-out;
+  opacity: 0;
+  display: block;
+  word-wrap: break-word;
+  line-height: 1.3;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.todo::-webkit-scrollbar {
+  display: none;
+}
+
+.todo::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.todo:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.todoBtn {
+  all: unset;
+  position: absolute;
+  bottom: 2vh;
+  right: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.todoClose {
+  all: unset;
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 2px 4.625px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.todoOpen {
+  all: unset;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.todoBtn:hover {
+  background-color: rgb(73, 73, 73);
+  color: white;
+}
+
+.todoClose:hover {
+  background-color: rgb(255, 88, 88);
+  color: white;
+}
+
+.todoOpen:hover {
+  background-color: rgb(73, 73, 73);
+  color: white;
+}

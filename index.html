@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="login">
+      <input type="text" />
+      <button>Enter.</button>
+    </form>
+    <main class="hidden">
+      <section class="column left-column"></section>
+      <section class="column center-column">
+        <div class="clock">
+          <div class="row1">
+            <span id="time"></span>
+            <span id="date"></span>
+          </div>
+          <div class="row2">
+            <span id="geo"></span>
+            <span id="temperature"></span>
+            <span id="weather"></span>
+          </div>
+        </div>
+        <div class="console">
+          <form class="todoForm todoInactive">
+            <textarea
+              class="todo"
+              cols="30"
+              placeholder="Enter todos, separated by a line-break."
+            ></textarea>
+            <i class="fa-solid fa-check todoBtn"></i>
+            <i class="fa-solid fa-xmark todoClose"></i>
+            <i class="fa-solid fa-circle-notch todoOpen"></i>
+          </form>
+          <div class="todoBox hidden">
+            <div class="todoList todoListActive">
+              <!-- <textarea class="todoText checkedTodo" readonly>
+❕To mark as done, click on the todo item</textarea
+              >
+              <textarea class="todoText checkedTodo" readonly>
+❕To delete a todo item, enable edit mode and click on the todo item.</textarea
+              >
+              <textarea class="todoText checkedTodo" readonly>
+❕To edit the content of a todo item, enable edit mode and right click on the todo item.</textarea
+              > -->
+            </div>
+            <i class="fa-solid fa-xmark todoClose2 todoActive"></i>
+            <i class="fa-solid fa-plus todoAdd todoActive"></i>
+            <i class="fa-solid fa-pen-to-square todoEdit todoActive"></i>
+          </div>
+        </div>
+      </section>
+      <section class="column right-column">
+        <div class="welcome"></div>
+      </section>
+    </main>
+  </body>
+  <script src="js/wallpaper.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/todo-toggle.js"></script>
+  <script
+    src="https://kit.fontawesome.com/a9d4c305f4.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
