@@ -19,6 +19,7 @@
   overflow: hidden;
   position: absolute;
   z-index: 4;
+  will-change: transform;
 }
 
 .editModeOn {
@@ -120,7 +121,7 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 46px;
+  grid-template-rows: min-content;
   grid-auto-rows: min-content;
   gap: 10px;
   justify-items: center;
@@ -148,6 +149,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   width: 92%;
+  height: min-content;
   min-height: 46px;
   background-color: transparent;
   background-color: rgba(59, 59, 59, 0.5);

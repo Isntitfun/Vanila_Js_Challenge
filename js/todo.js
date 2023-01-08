@@ -37,7 +37,7 @@ const paintTodos = (todo, id) => {
   newTodo.setAttribute("data-id", id);
   newTodo.innerText = todo;
   todoList.appendChild(newTodo);
-  // adjustHeight(newTodo);
+  adjustHeight(newTodo);
 };
 
 const handleTodoSubmit = (event) => {
@@ -97,6 +97,12 @@ const editTodos = (event) => {
       target.removeEventListener("click", removeTodos);
       target.removeEventListener("click", handleTodoChecked);
     } else {
+      let editedTodo = todos.find((todo) => todo.todoID == target.dataset.id);
+      editedTodo.value = target.value;
+      const index = todos.indexOf(editedTodo);
+      todos.splice(index, 1, editedTodo);
+      saveTodos();
+      adjustHeight(target);
       target.setAttribute("readonly", "");
       target.classList.remove("editingTodo");
       target.classList.add("todoTextEdit");
@@ -128,6 +134,12 @@ const handleTodoEdit = () => {
     todoText.forEach((todo) => {
       todo.classList.remove("todoTextEdit");
       if (!todo.getAttribute("readonly")) {
+        let editedTodo = todos.find((i) => i.todoID == todo.dataset.id);
+        editedTodo.value = todo.value;
+        const index = todos.indexOf(editedTodo);
+        todos.splice(index, 1, editedTodo);
+        saveTodos();
+        adjustHeight(todo);
         todo.setAttribute("readonly", "");
         todo.classList.remove("editingTodo");
         todo.addEventListener("click", handleTodoChecked);
